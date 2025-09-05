@@ -125,6 +125,7 @@ Creamos un método usando StringBuffer
 ![img_2.png](img_2.png)
 
 ### **Primer choque**
+Realizamos el merge y resolvemos el conflicto  para combinar ambas transformaciones y dejarlo en el feature del reto
 
 
 ## Parte 3 - Cuestionario:
