@@ -11,7 +11,7 @@ public class CarreraParalela {
         int cantidad = numeros.size();
         return new ResultadoMinimo(min, cantidad);
     }
-    
+
     public static class ResultadoMinimo {
         public int minimo;
         public int cantidad;
