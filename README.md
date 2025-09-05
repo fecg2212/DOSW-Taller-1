@@ -8,7 +8,7 @@
 las ramas necesarias para realizar los 6 retos con el
 comando 'git checkout nombre_rama'
 
-![img.png](img.png)
+![RAMAS](docs/img.png)
 
 ## Reto #1: La bienvenida
 Definimos un objeto estudiante con atributos básicos: nombre, edad, correo y semestre.
@@ -22,6 +22,6 @@ Tiene un método generarMensaje(List) que:
 
 Por último usamos el comando 'mvn clean spring-boot:run' para compilarlo con maven dándonos la salida esperada
 
-![img_1.png](img_1.png)
+![SALIDA](docs/img_1.png)
 
 
