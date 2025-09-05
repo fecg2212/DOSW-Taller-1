@@ -43,6 +43,7 @@ Y por último realizamos el commit inicial con la estructura base
 
 Y se realiza la función
 
+![img_4.png](img_4.png)
 
 
 
