@@ -45,6 +45,15 @@ Y se realiza la función
 
 ![img_4.png](img_4.png)
 
+**Estudiante A:** Actualizamos nuestro carril con los cambios del estudiante A y realizamos la función
+para calcular el número más pequeño de un listado de números ingresados
+
+![img_5.png](img_5.png)
+
+Y realizamos el commit correspondiente
+
+![img_6.png](img_6.png)
+
 
 
 
