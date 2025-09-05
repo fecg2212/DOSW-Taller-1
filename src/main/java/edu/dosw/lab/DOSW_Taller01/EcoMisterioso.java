@@ -5,10 +5,14 @@ import java.util.stream.IntStream;
 
 public class EcoMisterioso {
 
-	public static String repetirConBuilder(String mensaje) {
-		return IntStream.range(0, 3)
-				.mapToObj(i -> mensaje)
-				.collect(Collectors.joining(" "));
-	}
+    public static String ecoCombinado(String mensaje) {
+        String repetido = IntStream.range(0, 3)
+                .mapToObj(i -> mensaje)
+                .collect(Collectors.joining(" "));
+
+        // Invertir el resultado
+        return new StringBuffer(repetido).reverse().toString();
+    }
 }
+
 
