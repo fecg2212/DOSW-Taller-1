@@ -66,6 +66,20 @@ Y realizamos el commit
 
 ![img_9.png](img_9.png)
 
+**Segunda vuelta**
 
+**Carril 1:** Añadimos la función de la verificación de si el numero
+mayor es multiplo de 2.
+
+![img_10.png](img_10.png)
+
+**Carril 2:** Y añadimos la función que verifica si el numero mayor
+es divisor de 2.
+
+![img_11.png](img_11.png)
+
+Y hacemos el commit 
+
+![img_12.png](img_12.png)
 
 
