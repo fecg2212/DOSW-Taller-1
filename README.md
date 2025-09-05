@@ -104,4 +104,8 @@ y probamos el código para ver si sí se implementó bien.
 
 ![img_15.png](docs/img_15.png)
 
+Y por último eliminamos las sub ramas
+
+![img.png](docs/img18.png)
+
 
