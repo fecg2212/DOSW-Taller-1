@@ -28,13 +28,21 @@ Por último usamos el comando 'mvn clean spring-boot:run' para compilarlo con ma
 
 **Estudiante A:** Cambiamos el nombre de Application para el reto 2 a CarreraParalela.java
 y luego creamos las subramas desde el feature del reto 2
-![CarreraParalela](img.png) 
 
-![SUBRAMAS](img_1.png)
+![img.png](img.png)
+
+![img_1.png](img_1.png)
 
 Y por último realizamos el commit inicial con la estructura base
 
+![img_2.png](img_2.png)
+
+**Estudiante B:** Arrancamos actualizando nuestro carril con los cambios subidos en el feature
+
 ![img_3.png](img_3.png)
+
+Y se realiza la función
+
 
 
 
