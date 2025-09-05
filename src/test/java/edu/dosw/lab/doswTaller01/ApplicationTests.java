@@ -1,4 +1,4 @@
-package edu.dosw.lab.DOSW_Taller01;
+package edu.dosw.lab.doswTaller01;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
