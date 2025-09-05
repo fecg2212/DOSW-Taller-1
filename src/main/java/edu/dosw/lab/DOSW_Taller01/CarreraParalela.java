@@ -1,4 +1,15 @@
+package edu.dosw.lab.DOSW_Taller01;
+
+import java.util.List;
+
 public class CarreraParalela {
-	// Aquí irán las funciones del reto
+
+    public static int numeroMaximo(List<Integer> numeros) {
+        return numeros.stream()
+                .max(Integer::compare)
+                .orElse(Integer.MIN_VALUE);
+    }
+
 }
+
 
