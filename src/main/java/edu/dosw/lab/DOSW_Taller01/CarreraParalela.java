@@ -4,7 +4,6 @@ import java.util.List;
 
 public class CarreraParalela {
 
-    // Función combinada de máximo, mínimo y cantidad
     public static ResultadoCombinado combinarResultados(List<Integer> numeros) {
         int max = numeros.stream().max(Integer::compare).orElse(Integer.MIN_VALUE);
         int min = numeros.stream().min(Integer::compare).orElse(Integer.MAX_VALUE);
@@ -23,13 +22,8 @@ public class CarreraParalela {
             this.maximo = maximo;
             this.minimo = minimo;
             this.cantidad = cantidad;
-            this.maxMultiplo2 = (maximo % 2 == 0) ? "Sí" : "No";
-            this.maxDivisor2 = null;
+            this.maxMultiplo2 = null;
+            this.maxDivisor2 = (2 % maximo == 0) ? "Sí" : "No";
         }
     }
-
 }
-
-
-
-
