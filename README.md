@@ -115,27 +115,27 @@ Y por último eliminamos las sub ramas
 ### **Estudiante A:** 
 Creamos las sub rama y un método usando StringBuilder
 
-![img.png](img.png)
+![img.png](docs/img19.png)
 
-![img_1.png](img_1.png)
+![img_1.png](docs/img20.png)
 
 ### **Estudiante B:**
 Creamos un método usando StringBuffer
 
-![img_2.png](img_2.png)
+![img_2.png](docs/img_21.png)
 
 ### **Primer choque**
 Realizamos el merge y resolvemos el conflicto  para combinar ambas transformaciones y dejarlo en el feature del reto
 
-![img_3.png](img_3.png)
+![img_3.png](docs/img_24.png)
 
 Ya después realizamos la respectiva clase para probar la implementación del código
 
-![img_4.png](img_4.png)
+![img_4.png](docs/img_23.png)
 
 Y por último eliminamos las sub ramas
 
-
+![img_5.png](docs/img_22.png)
 
 ## Parte 3 - Cuestionario:
 
