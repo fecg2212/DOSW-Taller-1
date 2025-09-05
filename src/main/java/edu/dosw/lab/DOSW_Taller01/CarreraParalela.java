@@ -11,7 +11,7 @@ public class CarreraParalela {
         int cantidad = numeros.size();
         return new ResultadoCombinado(max, min, cantidad);
     }
-    
+
     public static class ResultadoCombinado {
         public int maximo;
         public int minimo;
