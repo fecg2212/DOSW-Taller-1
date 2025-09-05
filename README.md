@@ -127,6 +127,15 @@ Creamos un método usando StringBuffer
 ### **Primer choque**
 Realizamos el merge y resolvemos el conflicto  para combinar ambas transformaciones y dejarlo en el feature del reto
 
+![img_3.png](img_3.png)
+
+Ya después realizamos la respectiva clase para probar la implementación del código
+
+![img_4.png](img_4.png)
+
+Y por último eliminamos las sub ramas
+
+
 
 ## Parte 3 - Cuestionario:
 
