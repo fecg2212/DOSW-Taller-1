@@ -16,13 +16,18 @@ public class CarreraParalela {
         public int maximo;
         public int minimo;
         public int cantidad;
+        public String maxMultiplo2; // Carril 1
+        public String maxDivisor2;  // Carril 2
 
         public ResultadoCombinado(int maximo, int minimo, int cantidad) {
             this.maximo = maximo;
             this.minimo = minimo;
             this.cantidad = cantidad;
+            this.maxMultiplo2 = (maximo % 2 == 0) ? "Sí" : "No";
+            this.maxDivisor2 = null;
         }
     }
+
 }
 
 
