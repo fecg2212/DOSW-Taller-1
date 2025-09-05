@@ -110,6 +110,22 @@ Y por último eliminamos las sub ramas
 
 ## Reto #3: El eco misterioso
 
+### Misión
+
+### **Estudiante A:** 
+Creamos las sub rama y un método usando StringBuilder
+
+![img.png](img.png)
+
+![img_1.png](img_1.png)
+
+### **Estudiante B:**
+Creamos un método usando StringBuffer
+
+![img_2.png](img_2.png)
+
+### **Primer choque**
+
 
 ## Parte 3 - Cuestionario:
 
