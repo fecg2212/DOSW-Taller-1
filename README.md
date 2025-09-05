@@ -54,7 +54,8 @@ Y realizamos el commit correspondiente
 
 ![img_6.png](img_6.png)
 
-**El primer choque** Al intentar mezclar los cambios de la otra rama ocurre un conflicto que toca resolver
+### **El primer choque** 
+Al intentar mezclar los cambios de la otra rama ocurre un conflicto que toca resolver
 
 ![img_8.png](img_8.png)
 
@@ -66,7 +67,7 @@ Y realizamos el commit
 
 ![img_9.png](img_9.png)
 
-**Segunda vuelta**
+### **Segunda vuelta**
 
 **Carril 1:** Añadimos la función de la verificación de si el numero
 mayor es multiplo de 2.
@@ -81,5 +82,22 @@ es divisor de 2.
 Y hacemos el commit 
 
 ![img_12.png](img_12.png)
+
+### **Tercer choque**
+
+**Carril 1:** Calculamos si la cantidad de datos de la lista es par
+
+Añadimos los nuevos atributos y los implementamos en el constructor
+
+![img_14.png](img_14.png)
+
+**Carril 2:** Calculamos si la cantidad de datos es impar
+
+También añadimos los nuevos atributos y modificamos el constructor
+
+![img_13.png](img_13.png)
+
+### **La gran meta**
+
 
 
