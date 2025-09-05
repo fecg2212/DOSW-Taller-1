@@ -108,4 +108,83 @@ Y por último eliminamos las sub ramas
 
 ![img.png](docs/img18.png)
 
+## Reto #3: El eco misterioso
 
+
+## Parte 3 - Cuestionario:
+
+### 1. Cuál es la diferencia entre git merge y git rebase
+Cuando trabajamos con Git y tienes una rama de desarrollo que quieres integrar con otra, como main, podemos hacerlo de dos formas principales: usando merge o rebase. Aunque ambas buscan el mismo objetivo lo hacen de manera muy distinta.
+
+Por otro lado, git rebase reescribe el historial. Lo que hace es tomar los commits de la rama y “reaplicarlos” como si hubieran sido creados directamente sobre la rama base. Esto da como resultado un historial mucho más limpio y lineal, sin commits de fusión.
+
+En resumen, merge respeta el pasado y lo documenta, mientras que rebase lo reescribe para que parezca más ordenado.
+
+### 2. Si dos ramas modifican la misma línea de un archivo ¿Qué sucede al hacer merge? 
+Cuando dos ramas modifican la misma línea de un archivo, Git no puede decidir automáticamente cuál versión conservar. Al intentar hacer git merge, se produce un conflicto de fusión.
+
+Git detiene el proceso de merge y marca el archivo como en conflicto, insertando delimitadores visuales en el código para que tú elijas qué versión conservar.
+
+Debemos editar manualmente esa sección, decidir qué contenido queda o podemos combinar ambos si tienen sentido, y luego guardar el archivo.
+
+### 3. ¿Cómo puedes ver gráficamente el historial de merges y ramas en consola?
+Para ver gráficamente el historial de ramas y merges en la consola de Git, podemos usar el comando:
+
+git log --graph --oneline --decorate --all
+
+Este comando muestra un diagrama en texto del historial del repositorio, incluyendo bifurcaciones, fusiones y etiquetas. Cada línea representa un commit, y los símbolos como *, |, \, y / indican cómo se conectan las ramas entre sí.
+
+### 4. Explica la diferencia entre un commit y un push?
+Cuando hacemos un git commit, estamos registrando los cambios en el repositorio local. Es como decir: “Esto que acabo de modificar, quiero que quede guardado como una versión oficial en mi máquina”. El commit incluye un mensaje que describe lo que hicimos, y forma parte del historial del proyecto, pero solo tú lo ves.
+
+En cambio, cuando hacemos git push, estamos enviando esos commits al repositorio remoto.
+
+### 5. Para que sirve git stash y git pop?
+git stash se utiliza para guardar temporalmente los cambios no confirmados en el área de trabajo sin necesidad de hacer un commit. Esto permite cambiar de rama o realizar otras operaciones sin perder el trabajo en curso. Al ejecutar git stash, Git guarda los cambios en una pila especial y deja el directorio de trabajo limpio.
+
+git stash pop se emplea para recuperar los cambios guardados con git stash y aplicarlos nuevamente al área de trabajo. Además de restaurar los cambios, elimina el stash de la pila.
+
+### 6. ¿Qué diferencia hay entre HashMap y HashTable?
+HashMap y Hashtable son estructuras de datos en Java que almacenan pares clave-valor y utilizan técnicas de hashing para acceder rápidamente a los elementos.
+
+Hashtable es sincronizado, lo que significa que es seguro para entornos multihilo. Todos sus métodos están sincronizados internamente.
+
+HashMap, en cambio, no es sincronizado, por lo que no es seguro en aplicaciones concurrentes sin sincronización externa
+
+### 7. ¿Qué ventajas tiene Collectors.toMap() frente a un bucle tradicional para llenar un mapa?
+La principal ventaja es la concisión. Con Collectors.toMap(), es posible transformar una lista o cualquier flujo de datos en un mapa con una sola línea de código, especificando directamente cómo obtener las claves y los valores. Esto reduce el código repetitivo y mejora la legibilidad.
+
+### 8. ¿Si usas List con objetos y luego aplicas stream().map() que tipo de operación estás haciendo?
+Cuando se utiliza stream().map() sobre una List de objetos en Java, se está realizando una operación de transformación. Específicamente, map() es una operación intermedia dentro del flujo de datos que permite aplicar una función a cada elemento del stream, generando un nuevo stream con los resultados.
+
+### 9. ¿Qué hace el método stream().filter() y que retorna?
+El método stream().filter() en Java se utiliza para filtrar elementos de un flujo (stream) según una condición lógica definida por un predicado.
+
+Retorna un nuevo Stream que contiene únicamente los elementos que cumplen la condición especificada. Este stream puede ser procesado con otras operaciones como map(), sorted(), o finalizado con collect() para obtener una colección.
+
+### 10. Describe el paso a paso de cómo crear una rama desde develop si es una funcionalidad nueva.
+
+Se sigue este flujo:
+- Cambiar a la rama Develop
+
+git checkout Develop
+
+- Crear y cambiar la nueva rama
+
+git checkout -b nombre-de-la-funcionalidad
+
+- Desarrollar la funcionalidad
+
+Se realizan los cambios necesarios en el código, se agregan archivos si es necesario, y se confirman los cambios con commit.
+
+- Enviar la rama al repositorio remoto
+
+git push -u origin nombre-de-la-funcionalidad
+
+### 11. ¿Cuál es la diferencia entre crear una rama con git branch y con git checkout -b?
+La diferencia entre git branch y git checkout -b radica en que el primero solo crea la rama, mientras que el segundo la crea y cambia a ella en un solo paso.
+
+### 12. ¿Por qué es recomendable crear ramas feature/ para nuevas funcionalidades en lugar de trabajar en main directamente? 
+Crear ramas feature/ para nuevas funcionalidades en lugar de trabajar directamente en main es una práctica recomendada porque permite aislar el desarrollo, proteger la estabilidad del código principal y facilitar la colaboración entre desarrolladores.
+
+Al trabajar en una rama feature/, los cambios relacionados con una funcionalidad específica se mantienen separados del código oficial. Esto evita que errores o código incompleto afecten la rama main, que suele representar la versión estable del proyecto. 
