@@ -1,5 +1,5 @@
 package edu.dosw.lab.DOSW_Taller01;
-// carril uno
+
 import java.util.List;
 
 public class CarreraParalela {
@@ -26,10 +26,11 @@ public class CarreraParalela {
             this.maximo = maximo;
             this.minimo = minimo;
             this.cantidad = cantidad;
-            this.maxMultiplo2 = (maximo % 2 == 0) ? "Sí" : "No";   // Carril 1
-            this.maxDivisor2 = null;                                 // Carril 2
-            this.cantidadPar = (cantidad % 2 == 0) ? "Sí" : "No";   // Carril 1
-            this.cantidadImpar = null;                               // Carril 2
+            this.maxMultiplo2 = (maximo % 2 == 0) ? "Sí" : "No";
+            this.maxDivisor2 = (2 % maximo == 0) ? "Sí" : "No";
+            this.cantidadPar = (cantidad % 2 == 0) ? "Sí" : "No";
+            this.cantidadImpar = (cantidad % 2 != 0) ? "Sí" : "No";
         }
     }
+
 }
