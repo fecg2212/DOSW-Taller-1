@@ -54,6 +54,18 @@ Y realizamos el commit correspondiente
 
 ![img_6.png](img_6.png)
 
+**El primer choque** Al intentar mezclar los cambios de la otra rama ocurre un conflicto que toca resolver
+
+![img_8.png](img_8.png)
+
+Y para eso decidimos crear una función que combine los resultados
+
+![img_7.png](img_7.png)
+
+Y realizamos el commit
+
+![img_9.png](img_9.png)
+
 
 
 
