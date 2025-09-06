@@ -137,6 +137,72 @@ Y por último eliminamos las sub ramas
 
 ![img_5.png](docs/img_22.png)
 
+## Reto #4: El tesoro de las llaves duplicadas
+
+1. **Primer estudiante:**
+	- Crea el método `crearHashMap` en la clase `MapaHash`.
+	- Este método recibe una lista de pares clave-valor (`String`, `Integer`) y los almacena en un `HashMap`, ignorando claves duplicadas (conserva el primer valor encontrado).
+
+2. **Segundo estudiante:**
+	- Crea el método `crearHashtable` en la clase `MapaHashtable`.
+	- Este método recibe una lista de pares clave-valor y los almacena en un `Hashtable`, asegurando la sincronización e ignorando claves duplicadas.
+
+3. **Ambos estudiantes:**
+	- Actualizan la rama feature del reto.
+	- Crean el método `combinarYImprimir` en la clase `MapaCombinado` que recibe ambos mapas y los combina en uno solo.
+	- Si hay conflicto en las claves, se priorizan los valores del `Hashtable`.
+
+4. **Resolución de conflictos:**
+	- Se realiza merge y se resuelven los conflictos dejando una sola versión unificada del método de combinación.
+
+5. **Mejoras individuales:**
+	- El estudiante A añade la función que convierte todas las claves a mayúsculas antes de imprimir.
+	- El estudiante B añade la función que ordena las claves de forma ascendente antes de imprimir.
+
+6. **Función final combinada:**
+	- Se combinan ambas mejoras en una sola función (`combinarYImprimir`) que:
+	  - Combina `HashMap` y `Hashtable`.
+	  - Prioriza los valores del `Hashtable` en caso de conflicto.
+	  - Convierte las claves en mayúsculas.
+	  - Imprime en orden ascendente de clave usando `Collectors.toMap()` y expresiones lambda.
+
+### Ejemplo de uso
+
+El método `main` en `Application.java` muestra cómo usar las clases y métodos desarrollados:
+
+```java
+
+java.util.List<java.util.AbstractMap.SimpleEntry<String, Integer>> listaHash = java.util.Arrays.asList(
+	 new java.util.AbstractMap.SimpleEntry<>("oro", 5),
+	 new java.util.AbstractMap.SimpleEntry<>("plata", 3),
+	 new java.util.AbstractMap.SimpleEntry<>("oro", 7),
+	 new java.util.AbstractMap.SimpleEntry<>("diamante", 10)
+);
+java.util.List<java.util.AbstractMap.SimpleEntry<String, Integer>> listaTable = java.util.Arrays.asList(
+	 new java.util.AbstractMap.SimpleEntry<>("plata", 8),
+	 new java.util.AbstractMap.SimpleEntry<>("rubí", 4),
+	 new java.util.AbstractMap.SimpleEntry<>("oro", 12),
+	 new java.util.AbstractMap.SimpleEntry<>("esmeralda", 6)
+);
+
+java.util.HashMap<String, Integer> hashMap = MapaHash.crearHashMap(listaHash);
+java.util.Hashtable<String, Integer> hashTable = MapaHashtable.crearHashtable(listaTable);
+System.out.println("--- Resultado combinado ---");
+MapaCombinado.combinarYImprimir(hashMap, hashTable);
+
+```
+
+### Salida esperada
+
+```
+--- Resultado combinado ---
+Clave: DIAMANTE | Valor: 10
+Clave: ESMERALDA | Valor: 6
+Clave: ORO | Valor: 12
+Clave: PLATA | Valor: 8
+Clave: RUBÍ | Valor: 4
+```
+
 ## Parte 3 - Cuestionario:
 
 ### 1. Cuál es la diferencia entre git merge y git rebase
