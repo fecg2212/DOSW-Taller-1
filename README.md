@@ -300,6 +300,122 @@ Número en arena: 18
 
 ---
 
+## Reto #6: La máquina de decisiones
+
+En este reto, dos estudiantes unen sus fragmentos del manual para crear una máquina que responde a comandos escritos usando Java, switch-case y lambdas.
+
+### 1. Estudiante A (Fragmento 1 del Manual)
+
+Implementa un método usando switch-case con los siguientes comandos:
+
+- **SALUDAR** → La máquina dice: "¡Saludos, viajero del tiempo y del código!"
+- **DESPEDIR** → La máquina dice: "Que los bits te acompañen, hasta la próxima misión."
+- **CANTAR** → La máquina canta: "01010101"
+- **DANZAR** → La máquina gira y emite chispas: "Girando en modo fiesta."
+
+
+```java
+switch (comando) {
+	case "SALUDAR":
+		System.out.println("La máquina dice: ¡Saludos, viajero del tiempo y del código!");
+		break;
+	case "DESPEDIR":
+		System.out.println("La máquina dice: Que los bits te acompañen, hasta la próxima misión.");
+		break;
+	case "CANTAR":
+		System.out.println("La máquina canta: 01010101");
+		break;
+	case "DANZAR":
+		System.out.println("La máquina gira y emite chispas: Girando en modo fiesta.");
+		break;
+	// ...
+}
+```
+
+### 2. Estudiante B (Fragmento 2 del Manual)
+
+Implementa los siguientes comandos en el mismo switch-case:
+
+- **BROMEAR** → La máquina ríe: "¿Por qué la RAM rompió con la CPU? Porque necesitaba espacio..."
+- **GRITAR** → La máquina grita: "¡¡¡ALERTA DE STACK OVERFLOW!!!"
+- **SUSURRAR** → La máquina susurra: "Shhh... los bugs están dormidos."
+- **ANALIZAR** → La máquina procesa: "Analizando datos... resultado: ¡Eres increíble programando!"
+
+
+```java
+switch (comando) {
+	// ...
+	case "BROMEAR":
+		System.out.println("La máquina ríe: ¿Por qué la RAM rompió con la CPU? Porque necesitaba espacio...");
+		break;
+	case "GRITAR":
+		System.out.println("La máquina grita: ¡¡¡ALERTA DE STACK OVERFLOW!!!");
+		break;
+	case "SUSURRAR":
+		System.out.println("La máquina susurra: Shhh... los bugs están dormidos.");
+		break;
+	case "ANALIZAR":
+		System.out.println("La máquina procesa: Analizando datos... resultado: ¡Eres increíble programando!");
+		break;
+	default:
+		System.out.println("Comando desconocido.");
+}
+```
+
+### 3. Unificación y uso de lambdas
+
+Ambos fragmentos se unifican en un solo switch-case dentro de un Map<String, Runnable>, usando lambdas para ejecutar cada acción.
+
+
+```java
+private void inicializarComandos() {
+	for (String comando : new String[]{
+			"SALUDAR", "DESPEDIR", "CANTAR", "DANZAR",
+			"BROMEAR", "GRITAR", "SUSURRAR", "ANALIZAR"
+	}) {
+		comandos.put(comando, () -> {
+			switch (comando) {
+				// Todos los casos anteriores
+			}
+		});
+	}
+}
+```
+
+### 4. Ejecución de comandos
+
+El método `ejecutarComando` permite activar cualquier comando disponible:
+
+```java
+public void ejecutarComando(String comando) {
+	Runnable accion = comandos.get(comando);
+	if (accion != null) {
+		accion.run();
+	} else {
+		System.out.println("Comando no reconocido: " + comando);
+	}
+}
+```
+
+### 5. Ejemplo de uso en el main
+
+```java
+MaquinaDecisiones maquina = new MaquinaDecisiones();
+maquina.ejecutarComando("SALUDAR");
+maquina.ejecutarComando("BROMEAR");
+maquina.ejecutarComando("ANALIZAR");
+maquina.ejecutarComando("DANZAR");
+```
+
+### 6. Salida esperada
+
+```
+La máquina dice: ¡Saludos, viajero del tiempo y del código!
+La máquina ríe: ¿Por qué la RAM rompió con la CPU? Porque necesitaba espacio...
+La máquina procesa: Analizando datos... resultado: ¡Eres increíble programando!
+La máquina gira y emite chispas: Girando en modo fiesta.
+```
+
 
 ## Parte 3 - Cuestionario:
 
