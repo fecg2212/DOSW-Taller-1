@@ -203,6 +203,104 @@ Clave: PLATA | Valor: 8
 Clave: RUBÍ | Valor: 4
 ```
 
+## Reto #5: Batalla de Conjuntos
+
+En este reto, dos estudiantes trabajan en equipo para manipular conjuntos de números usando Java:
+
+### 1. Estudiante A (HashSet)
+
+**Crea un método que almacena números aleatorios sin orden y elimina los múltiplos de 3.**
+
+Clase: `ArenaHashSet.java`
+
+```java
+/**
+ * Almacena números en un HashSet y elimina los múltiplos de 3.
+ * Utiliza removeIf y lambda para filtrar los elementos.
+ * @param numeros Lista de números a almacenar
+ * @return HashSet sin múltiplos de 3
+ */
+public static HashSet<Integer> almacenarYFiltrar(List<Integer> numeros) {
+	HashSet<Integer> set = new HashSet<>(numeros);
+	set.removeIf(n -> n % 3 == 0);
+	return set;
+}
+```
+
+### 2. Estudiante B (TreeSet)
+
+**Crea un método que almacena números aleatorios en orden ascendente y elimina los múltiplos de 5.**
+
+Clase: `ArenaTreeSet.java`
+
+```java
+/**
+ * Almacena números en un TreeSet (ordenados) y elimina los múltiplos de 5.
+ * Utiliza removeIf y lambda para filtrar los elementos.
+ * @param numeros Lista de números a almacenar
+ * @return TreeSet sin múltiplos de 5
+ */
+public static TreeSet<Integer> almacenarYFiltrar(List<Integer> numeros) {
+	TreeSet<Integer> set = new TreeSet<>(numeros);
+	set.removeIf(n -> n % 5 == 0);
+	return set;
+}
+```
+
+### 3. Choque y unión de equipos
+
+**Ambos unen las colecciones en una sola estructura ordenada, eliminando duplicados y mostrando el resultado final.**
+
+Clase: `ArenaUnida.java`
+
+```java
+/**
+ * Une dos colecciones de números en una sola estructura ordenada (TreeSet), eliminando duplicados.
+ * Imprime los resultados usando stream() y lambda.
+ * @param setA Colección A (HashSet)
+ * @param setB Colección B (TreeSet)
+ */
+public static void unirYMostrar(Set<Integer> setA, Set<Integer> setB) {
+	TreeSet<Integer> union = new TreeSet<>();
+	union.addAll(setA);
+	union.addAll(setB);
+	union.stream()
+		.forEach(n -> System.out.println("Número en arena: " + n));
+}
+```
+
+### 4. Ejecución del reto
+
+El método `main` en `Application.java` muestra cómo se usan las clases y métodos desarrollados:
+
+```java
+// Reto #5: Batalla de Conjuntos
+java.util.List<Integer> listaHash = java.util.Arrays.asList(4, 9, 15, 7, 18, 21, 10, 5);
+java.util.List<Integer> listaTree = java.util.Arrays.asList(12, 3, 25, 10, 7, 30, 18, 4);
+
+java.util.HashSet<Integer> hashSet = ArenaHashSet.almacenarYFiltrar(listaHash);
+java.util.TreeSet<Integer> treeSet = ArenaTreeSet.almacenarYFiltrar(listaTree);
+
+System.out.println("--- Unión de conjuntos en la arena ---");
+ArenaUnida.unirYMostrar(hashSet, treeSet);
+```
+
+### 5. Salida esperada
+
+```
+--- Unión de conjuntos en la arena ---
+Número en arena: 3
+Número en arena: 4
+Número en arena: 5
+Número en arena: 7
+Número en arena: 10
+Número en arena: 12
+Número en arena: 18
+```
+
+---
+
+
 ## Parte 3 - Cuestionario:
 
 ### 1. Cuál es la diferencia entre git merge y git rebase
